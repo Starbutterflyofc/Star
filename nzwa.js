@@ -689,30 +689,9 @@ async function starts() {
 		        nzwa.updatePresence(from, Presence.composing)
 		        if (messagesC.includes("#izinadmin")) return reply("#izinadmin recebido")
 		        var kic = `${sender.split("@")[0]}@s.whatsapp.net`
-		        reply(`Link de grupo detectado ${sender.split("@")[0]} Você será expulso do grupo Em 5 segundos`)
+		        reply(`Link de grupo detectado ${sender.split("@")[0]} Você será expulso do grupo.`)
 		        setTimeout( () => {
-			        nzwa.groupRemove(from, [kic]).catch((e)=>{reply(`*ERR:* ${e}`)})
-		        }, 5000)
-		        setTimeout( () => {
-			        nzwa.updatePresence(from, Presence.composing)
-			        reply("")
-		        }, 4000)
-		        setTimeout( () => {
-			        nzwa.updatePresence(from, Presence.composing)
-		                reply("")
-		        }, 3000)
-		        setTimeout( () => {
-			        nzwa.updatePresence(from, Presence.composing)
-			        reply("")
-		        }, 2000)
-		        setTimeout( () => {
-			        nzwa.updatePresence(from, Presence.composing)
-			        reply("")
-		        }, 1000)
-		        setTimeout( () => {
-			        nzwa.updatePresence(from, Presence.composing)
-			        reply("")
-		        }, 0)
+			        nzwa.groupRemove(from, [kic]).catch((e)=>{reply(`*ERR:* ${e}`)})		       
 	        }
 	
 	            if (messagesC.includes("www.")){
